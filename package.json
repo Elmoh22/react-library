@@ -2,7 +2,10 @@
   "name": "library-react-tutorial",
   "version": "0.1.0",
   "private": true,
-  "engines": { "node": "v16.18.0", "npm": "8.19.2"},
+  "engines": {
+    "node": "v16.18.0",
+    "npm": "8.19.2"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
@@ -10,6 +13,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "create-app-react": "^1.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.2",
