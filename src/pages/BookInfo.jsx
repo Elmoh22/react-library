@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import React from "react";
 import { Link, useParams } from "react-router-dom";
 import Book from "../components/ui/Book";
 import Price from "../components/ui/Price";
 import Rating from "../components/ui/Rating";
 
-export default function BookInfo({ books, addToCart, cart = [] }) {
+export default function BookInfo({ books, addToCart, cart }) {
   const { id } = useParams();
   const book = books.find((book) => +book.id === +id);
 
@@ -14,7 +14,7 @@ export default function BookInfo({ books, addToCart, cart = [] }) {
   }
 
   function bookExistsOnCart() {
-    return cart.find(book => +book.id === +id);
+    return cart.find((book) => +book.id === +id);
   }
 
   return (
@@ -59,7 +59,9 @@ export default function BookInfo({ books, addToCart, cart = [] }) {
                   </p>
                 </div>
                 {bookExistsOnCart() ? (
-                  <button className="btn">Checkout</button>
+                  <Link to={`/cart`}>
+                    <button className="btn">Checkout</button>
+                  </Link>
                 ) : (
                   <button className="btn" onClick={() => addBookToCart(book)}>
                     Add to cart
