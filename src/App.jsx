@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Nav from "./components/Nav.jsx";
 import Footer from "./components/Footer.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
